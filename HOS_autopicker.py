@@ -89,6 +89,15 @@ def autopicker(trace, aic_backstep_samples):
     
     # calculate rolling AIC CF
     cfaic = aic_zhang(trace[indx_k - aic_backstep_samples:indx_k])
-    
-    return (indx_k - aic_backstep_samples) + np.argmin(cfaic)
+        
+    # calculate rolling AIC CF
+    # UPDATED Wednesday 25 January 2023: added the following if statement.
+    # If aic_backstep_samples is larger than len(trace[0:indx_k]), then ignore
+    # aic_backstep_samples.
+    if len(trace[0:indx_k]) >= aic_backstep_samples:
+        cfaic = aic_zhang(trace[indx_k - aic_backstep_samples : indx_k])
+        return (indx_k - aic_backstep_samples) + np.nanargmin(cfaic[1:-1])+1
+    else:
+        cfaic = aic_zhang(trace[0 : indx_k])
+        return np.nanargmin(cfaic[1:-1])+1
 
