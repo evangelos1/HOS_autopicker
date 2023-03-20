@@ -34,7 +34,7 @@ For more details, see: Korkolis et al. (2021): A Laboratory Perspective on the
 Gutenberg‐Richter and Characteristic Earthquake Models. Journal of Geophysical
 Research - Solid Earth. DOI: https://doi.org/10.1029/2021JB021730.
 
-Author: Evangelos Korkolis, ekorko@gmail.com
+Author: Evangelos Korkolis, ekorko -at- gmail -dot- com
 '''
 
 import numpy as np
