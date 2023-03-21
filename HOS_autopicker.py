@@ -83,14 +83,11 @@ def aic_zhang(trace):
 def autopicker(trace, aic_backstep_samples):
     ''' Provide a trace and the AIC backstep (number of samples) '''
     
-    # calculate expanding kurtosis CF
+    # calculate expanding kurtosis characteristic function
     cfk = expanding_kurtosis(trace)
     indx_k = np.where(cfk/np.max(cfk) > 0.99)[0][0]
     
-    # calculate rolling AIC CF
-    cfaic = aic_zhang(trace[indx_k - aic_backstep_samples:indx_k])
-        
-    # calculate rolling AIC CF
+    # calculate rolling AIC characteristic function
     # UPDATED Wednesday 25 January 2023: added the following if statement.
     # If aic_backstep_samples is larger than len(trace[0:indx_k]), then ignore
     # aic_backstep_samples.
