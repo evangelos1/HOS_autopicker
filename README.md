@@ -5,6 +5,9 @@ The goal is to create an automatic picker with as few tweakable parameters as po
 
 This code is meant to be used with individual AE waveforms collected in block (aka "trigger") mode. The original application of the code was the detection of first arrivals from AE waveforms collected during stick-slip experiments on glass bead aggregates (see: Korkolis et al., 2021: A Laboratory Perspective on the Gutenberg‐Richter and Characteristic Earthquake Models, JGR Solid Earth. DOI: https://doi.org/10.1029/2021JB021730). Modifications may be required to apply the code to AE data collected in other ways.
 
+Matlab version here: https://gitlab.ruhr-uni-bochum.de/korkoely/HOS_autopicker
+
+
 This work has been inspired by the following publications:
 
 1. Zhang et al., 2003: Automatic P-Wave Arrival Detection and Picking with Multiscale Wavelet Analysis for Single-Component Recordings. BSSA. DOI: https://doi.org/10.1785/0120020241.
